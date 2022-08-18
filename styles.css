@@ -1,0 +1,70 @@
+
+.img-background {
+    width: 50vw;
+}
+
+.card {
+    width: 80vw;
+    margin-top: 10vh;
+}
+
+.profilePic {
+    margin-top: -20vh;
+    border-radius: 50%;
+    width: 15vw;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.derecha{
+    flex-basis: 75%;
+}
+
+.izquierda{
+    flex-basis: 20%;
+}
+
+.tituloSkill{
+text-align: center;
+}
+
+.tituloIdiomas{
+text-align: center;
+}
+    
+
+.allSkills{
+    width: 75%;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.allIdiomas{
+    width: 75%;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+
+.logoEmpresa{
+    max-width: 100px;
+    
+}
+
+.trash{
+    width: 18px;
+    height: 18px;
+}
+
+.artdeco-button{
+    height: 2.2rem;
+    width: 2.2rem;
+    min-width: auto;
+}
+
+.formularioModificar{
+    display: none;
+}
