@@ -1,0 +1,77 @@
+{
+  "backimage" : "https://www.goodcore.co.uk/blog/wp-content/uploads/2019/08/coding-vs-programming-2.jpg",
+  "fotoPerfil" : "./assets/FotoPerfil.jpg",
+  "nombre" : "Pablo Gomez Cassou",
+  "position" : "Full Stack Developer Jr. ",
+  "ciudad" : "Mar del Plata - Argentina",
+  "experiencia" : [{
+    "position" : "Jefe de Producción",
+    "empresa" : "McCain",
+    "periodo" : "Junio 2017 - Diciembre 2021",
+    "logoEmpresa": "./assets/McCain.jpg",
+    "altLogoEmpresa": "McCain Logo"
+   },
+    {
+    "position" : " Supervisor de Ventas",
+    "empresa" : "Cervecería y Maltería Quilmes",
+    "periodo" : "Junio 2014 - Diciembre 2016",
+    "logoEmpresa": "./assets/Quilmes.jpg",
+    "altLogoEmpresa": "Quilmes Logo"
+    }],
+    "educacion" : [{
+      "position" :" Full Stack Developer Jr.",
+      "establecimiento" :"Argentina Programa",
+      "periodo" : " Febrero 2022 - Septiembre 2022",
+      "logoEstablecimiento": "./assets/ArgentinaPrograma.jpg",
+      "altLogoEstablecimiento": "Argentina Programa Logo"
+    },
+    {
+      "position" :" Ingeniería Industrial",
+      "establecimiento" :"Facultad de Ingeniería - Universidad Nacional de Mar del Plata",
+      "periodo" : " Marzo 2009 - Diciembre 2014",
+      "logoEstablecimiento": "./assets/Universidad.jpg",
+      "altLogoEstablecimiento": "Universidad Logo"
+    }],
+    "skills" : [{
+      "nombre": "Trabajo en equipo",
+      "valor": "90%",
+      "width": "width: 90%"
+    },
+    {
+      "nombre": "Resolución de Problemas",
+      "valor": "85%",
+      "width": "width: 85%"
+    },
+    {
+      "nombre": "Comunicación",
+      "valor": "95%",
+      "width": "width: 95%"
+    },
+    {
+      "nombre": "Liderazgo",
+      "valor": "75%",
+      "width": "width: 75%"
+    },
+    {
+      "nombre": "Ética profesional",
+      "valor": "100%",
+      "width": "width: 100%"
+    }
+  ],
+  "idiomas" :[
+  {
+    "nombre": "Español",
+    "valor": "100%",
+    "width": "width: 100%: "
+  },
+  {
+    "nombre": "Inglés",
+    "valor": "80%",
+    "width": "width: 80%"
+  },
+  {
+    "nombre": "Portugués",
+    "valor": "40%",
+    "width": "width: 40%"
+  }]
+} 
