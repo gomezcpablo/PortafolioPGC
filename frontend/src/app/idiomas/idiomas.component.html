@@ -1,0 +1,22 @@
+<div class="container">
+    <h2>Lista idiomas</h2>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Nombre</th>
+            <th>Porcentaje</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let idioma of idiomas">
+            <td>{{idioma.nombre}}</td>
+            <td>{{idioma.porcentaje}}</td>
+            <td>
+                <button (click)= "actualizarIdioma(idioma.id)" class="btn btn-info">Editar</button>
+                <button (click)= "eliminarIdioma(idioma.id)" class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
