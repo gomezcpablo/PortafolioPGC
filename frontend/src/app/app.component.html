@@ -1,14 +1,23 @@
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <a routerLink="idiomas" routerLinkActive="active" class="nav-link ">Lista de idiomas</a>
-        </li>
-        <li class="nav-item">
-            <a routerLink="registrar-idioma" routerLinkActive="active" class="nav-link ">Añadir idiomas</a>
-        </li>
-    </ul>
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a routerLink="" routerLinkActive="active" class="nav-link">Inicio</a>
+    </li>
+    <li class="nav-item">
+      <a
+        routerLink="registrar-idioma"
+        routerLinkActive="active"
+        class="nav-link"
+        >Añadir idiomas</a
+      >
+    </li>
+    <li class="nav-item">
+      <a routerLink="registrar-skill" routerLinkActive="active" class="nav-link"
+        >Añadir skill</a
+      >
+    </li>
+  </ul>
 </nav>
 
-
-<h1 class="text-center">{{title}}</h1>
+<h1 class="text-center">{{ title }}</h1>
 <router-outlet></router-outlet>

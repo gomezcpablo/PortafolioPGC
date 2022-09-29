@@ -33,7 +33,7 @@ export class IdiomaService {
     return this.httpClient.get<Idioma>(`${this.baseURL}/${id}`);
   }
 
-  //Este
+  //Este metodo sirve para eliminar un idioma por id
   eliminarIdioma(id:number):Observable<Object>{
     return this.httpClient.delete(`${this.baseURL}/${id}`);
   }

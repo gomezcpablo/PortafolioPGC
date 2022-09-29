@@ -1,0 +1,62 @@
+<div class="col-md-6 offset-md-3">
+  <h3 class="text-center">Registro de Skill</h3>
+  <form (ngSubmit)="onSubmit()" #skillForm="ngForm">
+    <div class="form-group">
+      <label>Skill : </label>
+      <input
+        type="text"
+        class="form-control"
+        id="nombre"
+        [(ngModel)]="skill.nombre"
+        name="nombre"
+        required
+        minlength="3"
+        maxlength="30"
+        placeholder="Escriba el Skill "
+        #nombre="ngModel"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)"
+      >
+        <div *ngIf="nombre.errors.required">Complete el skill por favor</div>
+        <div *ngIf="nombre.errors.minlength">
+          El skill debe contener como mínimo 3 caracteres
+        </div>
+        <div *ngIf="nombre.errors.maxlength">
+          El skill debe contener como máximo 30 caracteres
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Porcentaje de conocimiento : </label>
+      <input
+        type="number"
+        class="form-control"
+        id="porcentaje"
+        [(ngModel)]="skill.porcentaje"
+        name="porcentaje"
+        required
+        placeholder="Digite su porcentaje de conocimiento "
+        min="0"
+        max="100"
+        #porcentaje="ngModel"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="porcentaje.invalid && (porcentaje.dirty || porcentaje.touched)"
+      >
+        <div *ngIf="porcentaje.errors.required">
+          Complete su nivel de conocimiento por favor
+        </div>
+        <div *ngIf="porcentaje.errors.min">El valor debe ser entre 0-100</div>
+        <div *ngIf="porcentaje.errors.max">El valor debe ser entre 0-100</div>
+      </div>
+    </div>
+
+    <button class="btn btn-success" [disabled]="!skillForm.form.valid">
+      Guardar
+    </button>
+  </form>
+</div>

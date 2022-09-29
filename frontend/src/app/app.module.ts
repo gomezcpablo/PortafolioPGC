@@ -8,6 +8,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { RegistrarIdiomaComponent } from './registrar-idioma/registrar-idioma.component';
 import { FormsModule } from '@angular/forms';
 import { ActualizarIdiomaComponent } from './actualizar-idioma/actualizar-idioma.component';
+import { SkillsComponent } from './skills/skills.component';
+import { MainComponent } from './main/main.component';
+import { RegistrarSkillComponent } from './registrar-skill/registrar-skill.component';
+import { ActualizarSkillComponent } from './actualizar-skill/actualizar-skill.component';
 
 
 @NgModule({
@@ -16,6 +20,10 @@ import { ActualizarIdiomaComponent } from './actualizar-idioma/actualizar-idioma
     IdiomasComponent,
     RegistrarIdiomaComponent,
     ActualizarIdiomaComponent,
+    SkillsComponent,
+    MainComponent,
+    RegistrarSkillComponent,
+    ActualizarSkillComponent,
   ],
   imports: [
     BrowserModule,

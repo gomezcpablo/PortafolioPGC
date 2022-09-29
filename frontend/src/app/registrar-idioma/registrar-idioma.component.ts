@@ -27,7 +27,7 @@ export class RegistrarIdiomaComponent implements OnInit {
   }
 
   irALaListaDeIdiomas(){
-    this.router.navigate(['/idiomas']);
+    this.router.navigate(['']);
     swal('Idioma registrado',`El idioma ${this.idioma.nombre} ha sido registrado con exito`,`success`);
   }
 

@@ -24,7 +24,7 @@ export class ActualizarIdiomaComponent implements OnInit {
   }
 
   irALaListaDeIdiomas(){
-    this.router.navigate(['/idiomas']);
+    this.router.navigate(['']);
     swal('Idioma actualizado',`El idioma ${this.idioma.nombre} ha sido actualizado con exito`,`success`);
   }
 
