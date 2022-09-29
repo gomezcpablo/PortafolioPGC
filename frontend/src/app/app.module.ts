@@ -12,6 +12,9 @@ import { SkillsComponent } from './skills/skills.component';
 import { MainComponent } from './main/main.component';
 import { RegistrarSkillComponent } from './registrar-skill/registrar-skill.component';
 import { ActualizarSkillComponent } from './actualizar-skill/actualizar-skill.component';
+import { ExperienciasComponent } from './experiencias/experiencias.component';
+import { RegistrarExperienciaComponent } from './registrar-experiencia/registrar-experiencia.component';
+import { ActualizarExperienciaComponent } from './actualizar-experiencia/actualizar-experiencia.component';
 
 
 @NgModule({
@@ -24,6 +27,9 @@ import { ActualizarSkillComponent } from './actualizar-skill/actualizar-skill.co
     MainComponent,
     RegistrarSkillComponent,
     ActualizarSkillComponent,
+    ExperienciasComponent,
+    RegistrarExperienciaComponent,
+    ActualizarExperienciaComponent,
   ],
   imports: [
     BrowserModule,

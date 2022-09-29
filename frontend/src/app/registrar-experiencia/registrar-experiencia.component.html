@@ -1,0 +1,122 @@
+<div class="col-md-6 offset-md-3">
+  <h3 class="text-center">Registro de experiencia laboral</h3>
+  <form (ngSubmit)="onSubmit()" #experienciaForm="ngForm">
+    <div class="form-group">
+      <label>Puesto : </label>
+      <input
+        type="text"
+        class="form-control"
+        id="position"
+        [(ngModel)]="experiencia.position"
+        name="position"
+        required
+        minlength="3"
+        maxlength="30"
+        placeholder="Puesto desempeñado "
+        #position="ngModel"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="position.invalid && (position.dirty || position.touched)"
+      >
+        <div *ngIf="position.errors.required">
+          Complete el puesto desempeñado
+        </div>
+        <div *ngIf="position.errors.minlength">
+          El puesto debe contener como mínimo 3 caracteres
+        </div>
+        <div *ngIf="position.errors.maxlength">
+          El puesto debe contener como máximo 30 caracteres
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Empresa : </label>
+      <input
+        type="text"
+        class="form-control"
+        id="empresa"
+        [(ngModel)]="experiencia.empresa"
+        name="empresa"
+        required
+        minlength="3"
+        maxlength="30"
+        placeholder="Empresa donde realizó la experiencia "
+        #empresa="ngModel"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="empresa.invalid && (empresa.dirty || empresa.touched)"
+      >
+        <div *ngIf="empresa.errors.required">
+          Complete el nombre de la empresa por favor
+        </div>
+        <div *ngIf="empresa.errors.minlength">
+          El nombre de la empresa debe contener entre 3 y 30 caracteres
+        </div>
+        <div *ngIf="empresa.errors.maxlength">
+          El nombre de la empresa debe contener entre 3 y 30 caracteres
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Periodo : </label>
+      <input
+        type="text"
+        class="form-control"
+        id="periodo"
+        [(ngModel)]="experiencia.periodo"
+        name="periodo"
+        required
+        minlength="3"
+        maxlength="30"
+        placeholder="Periodo en el que realizo la experiencia. Ej: Junio 2017 - Diciembre 2021 "
+        #periodo="ngModel"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="periodo.invalid && (periodo.dirty || periodo.touched)"
+      >
+        <div *ngIf="periodo.errors.required">
+          Complete el periodo que duró la experiencia
+        </div>
+        <div *ngIf="periodo.errors.minlength">
+          El periodo debe contener entre 3 y 40 caracteres
+        </div>
+        <div *ngIf="periodo.errors.maxlength">
+          El periodo debe contener entre 3 y 40 caracteres
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>URL del logo de la empresa :</label>
+      <input
+        type="text"
+        class="form-control"
+        id="logo"
+        [(ngModel)]="experiencia.logo"
+        name="logo"
+        required
+        minlength="3"
+        placeholder="Inserte URL del logo de la empresa "
+        #logo="ngModel"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="logo.invalid && (logo.dirty || logo.touched)"
+      >
+        <div *ngIf="logo.errors.required">Complete la URL</div>
+        <div *ngIf="logo.errors.minlength">
+          La URL debe contener como mínimo 3 caracteres
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn-success" [disabled]="!experienciaForm.form.valid">
+      Guardar
+    </button>
+  </form>
+</div>
