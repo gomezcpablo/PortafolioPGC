@@ -18,7 +18,7 @@ public class Estudio {
     @Column(name = "position", nullable = false)
     private String position;
     @Column(name = "establecimiento", nullable = false)
-    private String empresa;
+    private String establecimiento;
     @Column(name = "periodo", nullable = false)
     private String periodo;
     @Column(name = "logo")
@@ -27,11 +27,11 @@ public class Estudio {
     public Estudio() {
     }
 
-    public Estudio(Long id, String position, String empresa, String periodo, String logo) {
+    public Estudio(Long id, String position, String establecimiento, String periodo, String logo) {
         super();
         this.id = id;
         this.position = position;
-        this.empresa = empresa;
+        this.establecimiento = establecimiento;
         this.periodo = periodo;
         this.logo = logo;
     }
@@ -52,12 +52,12 @@ public class Estudio {
         this.position = position;
     }
 
-    public String getEmpresa() {
-        return empresa;
+    public String getEstablecimiento(){
+        return establecimiento;
     }
 
-    public void setEmpresa(String empresa) {
-        this.empresa = empresa;
+    public void setEstablecimiento(String establecimiento) {
+        this.establecimiento = establecimiento;
     }
 
     public String getPeriodo() {

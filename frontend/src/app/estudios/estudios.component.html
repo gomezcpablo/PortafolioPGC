@@ -1,17 +1,17 @@
-<div class="card" id="Experiencia">
+<div class="card" id="Estudios">
   <div class="card-body">
     <div class="container">
       <div class="row">
         <div class="col-11">
-          <h5 class="card-title">Experiencia</h5>
+          <h5 class="card-title">Estudios</h5>
         </div>
         <div class="col-1">
           <button
             type="button"
             class="btn"
             id="agregar"
-            onclick="location.href='./registrar-experiencia'"
-            routerLink="/nuevaexp"
+            onclick="location.href='./registrar-estudio'"
+            routerLink="/nuevoest"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -30,27 +30,22 @@
             </svg>
           </button>
         </div>
-
         <section
-          *ngFor="let experiencia of experiencias"
+          *ngFor="let estudio of estudios"
           class="flex-container"
           id="aBorrar1"
         >
           <div class="izquierda">
-            <img
-              [src]="experiencia.logo"
-              class="logoEmpresa"
-              alt="Logo Empresa"
-            />
+            <img [src]="estudio.logo" class="logoEmpresa" alt="Logo Empresa" />
           </div>
           <div class="derecha">
-            <h6 id="puesto1">{{ experiencia.position }}</h6>
-            <p class="empresa" id="empresa1">{{ experiencia.empresa }}</p>
-            <p class="tiempo" id="periodo1">{{ experiencia.periodo }}</p>
+            <h6 id="puesto1">{{ estudio.position }}</h6>
+            <p class="empresa" id="empresa1">{{ estudio.establecimiento }}</p>
+            <p class="tiempo" id="periodo1">{{ estudio.periodo }}</p>
           </div>
           <div class="botones">
             <button
-              (click)="eliminarExperiencia(experiencia.id)"
+              (click)="eliminarEstudio(estudio.id)"
               type="button"
               class="btn"
               id="botonBorrar1"
@@ -69,7 +64,7 @@
               </svg>
             </button>
             <button
-              (click)="actualizarExperiencia(experiencia.id)"
+              (click)="actualizarEstudios(estudio.id)"
               type="button"
               class="btn"
               id="botonModificar2"

@@ -1,0 +1,125 @@
+<div class="col-md-6 offset-md-3">
+  <h3 class="text-center">Registro de estudios</h3>
+  <form (ngSubmit)="onSubmit()" #estudioForm="ngForm">
+    <div class="form-group">
+      <label>Carrera/curso: </label>
+      <input
+        type="text"
+        class="form-control"
+        id="position"
+        [(ngModel)]="estudio.position"
+        name="position"
+        required
+        minlength="3"
+        maxlength="30"
+        placeholder="Carrera/curso realizado "
+        #position="ngModel"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="position.invalid && (position.dirty || position.touched)"
+      >
+        <div *ngIf="position.errors.required">
+          Complete la carrera/curso realizado
+        </div>
+        <div *ngIf="position.errors.minlength">
+          Debe contener como mínimo 3 caracteres
+        </div>
+        <div *ngIf="position.errors.maxlength">
+          Debe contener como máximo 30 caracteres
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Establecimiento : </label>
+      <input
+        type="text"
+        class="form-control"
+        id="establecimiento"
+        [(ngModel)]="estudio.establecimiento"
+        name="establecimiento"
+        required
+        minlength="3"
+        maxlength="30"
+        placeholder="Establecimiento donde realizó el estudio "
+        #establecimiento="ngModel"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="
+          establecimiento.invalid &&
+          (establecimiento.dirty || establecimiento.touched)
+        "
+      >
+        <div *ngIf="establecimiento.errors.required">
+          Complete el nombre del establecimiento
+        </div>
+        <div *ngIf="establecimiento.errors.minlength">
+          Debe contener entre 3 y 30 caracteres
+        </div>
+        <div *ngIf="establecimiento.errors.maxlength">
+          Debe contener entre 3 y 30 caracteres
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Periodo : </label>
+      <input
+        type="text"
+        class="form-control"
+        id="periodo"
+        [(ngModel)]="estudio.periodo"
+        name="periodo"
+        required
+        minlength="3"
+        maxlength="30"
+        placeholder="Periodo en el que realizo el estudio. Ej: Junio 2017 - Diciembre 2021 "
+        #periodo="ngModel"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="periodo.invalid && (periodo.dirty || periodo.touched)"
+      >
+        <div *ngIf="periodo.errors.required">
+          Complete el periodo que duró el estudio
+        </div>
+        <div *ngIf="periodo.errors.minlength">
+          El periodo debe contener entre 3 y 40 caracteres
+        </div>
+        <div *ngIf="periodo.errors.maxlength">
+          El periodo debe contener entre 3 y 40 caracteres
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>URL del logo del establecimiento :</label>
+      <input
+        type="text"
+        class="form-control"
+        id="logo"
+        [(ngModel)]="estudio.logo"
+        name="logo"
+        required
+        minlength="3"
+        placeholder="Inserte URL del logo del establecimiento "
+        #logo="ngModel"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="logo.invalid && (logo.dirty || logo.touched)"
+      >
+        <div *ngIf="logo.errors.required">Complete la URL</div>
+        <div *ngIf="logo.errors.minlength">
+          La URL debe contener como mínimo 3 caracteres
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn-success" [disabled]="!estudioForm.form.valid">
+      Guardar
+    </button>
+  </form>
+</div>

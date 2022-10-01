@@ -15,6 +15,12 @@ import { ActualizarSkillComponent } from './actualizar-skill/actualizar-skill.co
 import { ExperienciasComponent } from './experiencias/experiencias.component';
 import { RegistrarExperienciaComponent } from './registrar-experiencia/registrar-experiencia.component';
 import { ActualizarExperienciaComponent } from './actualizar-experiencia/actualizar-experiencia.component';
+import { EstudiosComponent } from './estudios/estudios.component';
+import { RegistrarEstudioComponent } from './registrar-estudio/registrar-estudio.component';
+import { ActualizarEstudioComponent } from './actualizar-estudio/actualizar-estudio.component';
+import { DatosComponent } from './datos/datos.component';
+import { ActualizarDatosComponent } from './actualizar-datos/actualizar-datos.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -30,6 +36,12 @@ import { ActualizarExperienciaComponent } from './actualizar-experiencia/actuali
     ExperienciasComponent,
     RegistrarExperienciaComponent,
     ActualizarExperienciaComponent,
+    EstudiosComponent,
+    RegistrarEstudioComponent,
+    ActualizarEstudioComponent,
+    DatosComponent,
+    ActualizarDatosComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

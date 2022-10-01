@@ -1,0 +1,142 @@
+<div class="col-md-6 offset-md-3">
+  <h3 class="text-center">Modificar experiencia laboral</h3>
+  <form (ngSubmit)="onSubmit()" #datosForm="ngForm">
+    <div class="form-group">
+      <label>Nombre : </label>
+      <input
+        type="text"
+        class="form-control"
+        id="nombre"
+        [(ngModel)]="datos.nombre"
+        name="nombre"
+        required
+        minlength="3"
+        maxlength="30"
+        placeholder="Nombre"
+        #nombre="ngModel"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)"
+      >
+        <div *ngIf="nombre.errors.required">Complete su nombre</div>
+        <div *ngIf="nombre.errors.minlength">
+          El nombre debe contener como mínimo 3 caracteres
+        </div>
+        <div *ngIf="nombre.errors.maxlength">
+          El nombre debe contener como máximo 30 caracteres
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Posicion : </label>
+      <input
+        type="text"
+        class="form-control"
+        id="empresa"
+        [(ngModel)]="datos.position"
+        name="position"
+        required
+        minlength="3"
+        maxlength="30"
+        placeholder="Posicion actual "
+        #position="ngModel"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="position.invalid && (position.dirty || position.touched)"
+      >
+        <div *ngIf="position.errors.required">
+          Complete la posicion por favor
+        </div>
+        <div *ngIf="position.errors.minlength">
+          Debe contener entre 3 y 30 caracteres
+        </div>
+        <div *ngIf="position.errors.maxlength">
+          Debe contener entre 3 y 30 caracteres
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Ciudad : </label>
+      <input
+        type="text"
+        class="form-control"
+        id="ciudad"
+        [(ngModel)]="datos.ciudad"
+        name="ciudad"
+        required
+        minlength="3"
+        maxlength="30"
+        placeholder="Complete su ciudad "
+        #ciudad="ngModel"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="ciudad.invalid && (ciudad.dirty || ciudad.touched)"
+      >
+        <div *ngIf="ciudad.errors.required">Complete el campo</div>
+        <div *ngIf="ciudad.errors.minlength">
+          Debe contener entre 3 y 40 caracteres
+        </div>
+        <div *ngIf="ciudad.errors.maxlength">
+          Debe contener entre 3 y 40 caracteres
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>URL foto de perfil :</label>
+      <input
+        type="text"
+        class="form-control"
+        id="logo"
+        [(ngModel)]="datos.logo"
+        name="logo"
+        required
+        minlength="3"
+        placeholder="Inserte URL de la foto de perfil "
+        #logo="ngModel"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="logo.invalid && (logo.dirty || logo.touched)"
+      >
+        <div *ngIf="logo.errors.required">Complete la URL</div>
+        <div *ngIf="logo.errors.minlength">
+          La URL debe contener como mínimo 3 caracteres
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Sobre mí :</label>
+      <input
+        type="text"
+        class="form-control"
+        id="sobremi"
+        [(ngModel)]="datos.sobremi"
+        name="sobremi"
+        required
+        minlength="3"
+        placeholder="Breve resumen de su información profesional"
+        #sobremi="ngModel"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="sobremi.invalid && (sobremi.dirty || sobremi.touched)"
+      >
+        <div *ngIf="sobremi.errors.required">Complete el campo</div>
+        <div *ngIf="sobremi.errors.minlength">
+          Debe contener como mínimo 3 caracteres
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn-success" [disabled]="!datosForm.form.valid">
+      Guardar
+    </button>
+  </form>
+</div>
