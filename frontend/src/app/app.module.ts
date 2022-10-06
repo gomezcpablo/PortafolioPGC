@@ -21,6 +21,8 @@ import { ActualizarEstudioComponent } from './actualizar-estudio/actualizar-estu
 import { DatosComponent } from './datos/datos.component';
 import { ActualizarDatosComponent } from './actualizar-datos/actualizar-datos.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { LoginComponent } from './login/login.component';
+import { interceptorProvider } from './interceptor-service';
 
 
 @NgModule({
@@ -42,6 +44,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     DatosComponent,
     ActualizarDatosComponent,
     NavbarComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +52,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [interceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

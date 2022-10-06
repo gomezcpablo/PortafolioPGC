@@ -10,6 +10,7 @@ import { DatosComponent } from './datos/datos.component';
 import { EstudiosComponent } from './estudios/estudios.component';
 import { ExperienciasComponent } from './experiencias/experiencias.component';
 import { IdiomasComponent } from './idiomas/idiomas.component';
+import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
 import { RegistrarEstudioComponent } from './registrar-estudio/registrar-estudio.component';
 import { RegistrarExperienciaComponent } from './registrar-experiencia/registrar-experiencia.component';
@@ -30,7 +31,8 @@ const routes: Routes = [
   {path:'registrar-estudio', component:RegistrarEstudioComponent},
   {path:'actualizar-estudio/:id', component:ActualizarEstudioComponent},
   {path:'datos', component:DatosComponent},
-  {path:'actualizar-datos/:id', component:ActualizarDatosComponent}
+  {path:'actualizar-datos/:id', component:ActualizarDatosComponent},
+  {path:'login', component:LoginComponent}
 
 ];
 

@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Idioma } from '../idioma';
 import { IdiomaService } from '../idioma.service';
 import { Router } from '@angular/router';
+import { TokenService } from '../token.service';
 
 @Component({
   selector: 'app-idiomas',
@@ -13,10 +14,15 @@ export class IdiomasComponent implements OnInit {
 
   idiomas:Idioma[];
 
-  constructor(private idiomaServicio:IdiomaService, private router:Router) { }
-
+  constructor(private idiomaServicio:IdiomaService, private router:Router, private tokenService: TokenService) { }
+  isLogged = false;
   ngOnInit(): void {
    this.obtenerIdiomas();
+   if (this.tokenService.getToken()) {
+    this.isLogged = true;
+  } else {
+    this.isLogged = false;
+  }
   }
 
   actualizarIdioma(id: number){

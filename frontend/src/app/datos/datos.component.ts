@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Datos } from '../datos';
 import { DatosService } from '../datos.service';
+import { TokenService } from '../token.service';
 
 @Component({
   selector: 'app-datos',
@@ -11,10 +12,16 @@ import { DatosService } from '../datos.service';
 export class DatosComponent implements OnInit {
 
   datos: Datos[];
-  constructor(private datosServicio:DatosService, private router:Router) { }
-
+  constructor(private datosServicio:DatosService, private router:Router,private tokenService: TokenService) { }
+  isLogged = false;
+  
   ngOnInit(): void {
     this.obtenerDatos();
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
    }
  
    actualizarDatos(id: number){

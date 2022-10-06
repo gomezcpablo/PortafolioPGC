@@ -12,6 +12,7 @@
             id="agregar"
             onclick="location.href='./registrar-experiencia'"
             routerLink="/nuevaexp"
+            *ngIf="isLogged"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -54,6 +55,7 @@
               type="button"
               class="btn"
               id="botonBorrar1"
+              *ngIf="isLogged"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -73,6 +75,7 @@
               type="button"
               class="btn"
               id="botonModificar2"
+              *ngIf="isLogged"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

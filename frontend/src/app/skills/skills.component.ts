@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import swal from 'sweetalert2';
 import { Skill } from '../skill';
 import { SkillService } from '../skill.service';
+import { TokenService } from '../token.service';
 
 @Component({
   selector: 'app-skills',
@@ -13,10 +14,15 @@ export class SkillsComponent implements OnInit {
 
 skills:Skill[];
 
-  constructor(private skillServicio:SkillService, private router:Router) { }
-
+  constructor(private skillServicio:SkillService, private router:Router, private tokenService: TokenService) { }
+  isLogged = false;
   ngOnInit(): void { 
     this.obtenerSkills();
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
   }
 
   actualizarSkill(id: number){

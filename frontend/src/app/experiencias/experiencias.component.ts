@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import swal from 'sweetalert2';
 import { Experiencia } from '../experiencia';
 import { ExperienciaService } from '../experiencia.service';
+import { TokenService } from '../token.service';
 
 @Component({
   selector: 'app-experiencias',
@@ -12,10 +13,18 @@ import { ExperienciaService } from '../experiencia.service';
 export class ExperienciasComponent implements OnInit {
 
   experiencias: Experiencia[];
-  constructor(private experienciaServicio:ExperienciaService, private router:Router) { }
+  constructor(private experienciaServicio:ExperienciaService, private router:Router,private tokenService: TokenService) { }
+
+  isLogged = false;
+
 
   ngOnInit(): void {
     this.obtenerExperiencias();
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
    }
  
    actualizarExperiencia(id: number){

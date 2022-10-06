@@ -1,59 +1,63 @@
+<app-navbar></app-navbar>
 <div class="col-md-6 offset-md-3">
-    <h3 class="text-center">Edición de Idioma</h3>
-    <form (ngSubmit)= "onSubmit()" #idiomaForm = "ngForm">
-      <div class="form-group">
-        <label>Idioma : </label>
-        <input type = "text"
+  <h3 class="text-center">Edición de Idioma</h3>
+  <form (ngSubmit)="onSubmit()" #idiomaForm="ngForm">
+    <div class="form-group">
+      <label>Idioma : </label>
+      <input
+        type="text"
         class="form-control"
-        id = "nombre"
-        [(ngModel)] = "idioma.nombre"
-        name = "nombre"
+        id="nombre"
+        [(ngModel)]="idioma.nombre"
+        name="nombre"
         required
         minlength="3"
         maxlength="20"
         placeholder="Escriba el Idioma "
-        #nombre = "ngModel"
-        >
-    <div class="alert alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
-      <div *ngIf="nombre.errors.required">
-        Complete el idioma por favor
-      </div>
-      <div *ngIf="nombre.errors.minlength">
-        El idioma debe contener como mínimo 3 caracteres
-      </div>
-      <div *ngIf="nombre.errors.maxlength">
-        El idioma debe contener como máximo 20 caracteres
+        #nombre="ngModel"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)"
+      >
+        <div *ngIf="nombre.errors.required">Complete el idioma por favor</div>
+        <div *ngIf="nombre.errors.minlength">
+          El idioma debe contener como mínimo 3 caracteres
+        </div>
+        <div *ngIf="nombre.errors.maxlength">
+          El idioma debe contener como máximo 20 caracteres
+        </div>
       </div>
     </div>
-      </div>
-  
-      <div class="form-group">
-        <label>Porcentaje de conocimiento : </label>
-        <input type = "number"
+
+    <div class="form-group">
+      <label>Porcentaje de conocimiento : </label>
+      <input
+        type="number"
         class="form-control"
-        id = "porcentaje"
-        [(ngModel)] = "idioma.porcentaje"
-        name = "porcentaje"
+        id="porcentaje"
+        [(ngModel)]="idioma.porcentaje"
+        name="porcentaje"
         required
         placeholder="Digite su porcentaje de conocimiento "
         min="0"
         max="100"
-        #porcentaje = "ngModel"
-        >
-        <div class="alert alert-danger" *ngIf="porcentaje.invalid && (porcentaje.dirty || porcentaje.touched)">
-          <div *ngIf="porcentaje.errors.required">
-            Complete su nivel de conocimiento por favor
-          </div>
-          <div *ngIf="porcentaje.errors.min">
-            El valor debe ser entre 0-100
-          </div>
-          <div *ngIf="porcentaje.errors.max">
-            El valor debe ser entre 0-100
-          </div>
+        #porcentaje="ngModel"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="porcentaje.invalid && (porcentaje.dirty || porcentaje.touched)"
+      >
+        <div *ngIf="porcentaje.errors.required">
+          Complete su nivel de conocimiento por favor
         </div>
-        </div>
-      
-      <button class="btn btn-success" [disabled]= "!idiomaForm.form.valid">Guardar</button>
-    </form>
-  </div>
-  
+        <div *ngIf="porcentaje.errors.min">El valor debe ser entre 0-100</div>
+        <div *ngIf="porcentaje.errors.max">El valor debe ser entre 0-100</div>
+      </div>
+    </div>
+
+    <button class="btn btn-success" [disabled]="!idiomaForm.form.valid">
+      Guardar
+    </button>
+  </form>
+</div>

@@ -11,6 +11,7 @@
             class="btn"
             id="botonBorrar"
             onclick="location.href='./registrar-skill'"
+            *ngIf="isLogged"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -59,6 +60,7 @@
                   type="button"
                   class="btn"
                   id="botonBorrar"
+                  *ngIf="isLogged"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -78,6 +80,7 @@
                   id="botonModificar11"
                   type="button"
                   class="btn"
+                  *ngIf="isLogged"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

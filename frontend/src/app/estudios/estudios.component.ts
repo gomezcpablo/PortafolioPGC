@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import swal from 'sweetalert2';
 import { Estudio } from '../estudio';
 import { EstudioService } from '../estudio.service';
+import { TokenService } from '../token.service';
 
 @Component({
   selector: 'app-estudios',
@@ -12,10 +13,15 @@ import { EstudioService } from '../estudio.service';
 export class EstudiosComponent implements OnInit {
 
   estudios: Estudio[];
-  constructor(private estudioServicio:EstudioService, private router:Router) { }
-
+  constructor(private estudioServicio:EstudioService, private router:Router,private tokenService: TokenService) { }
+  isLogged = false
   ngOnInit(): void {
     this.obtenerEstudios();
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
    }
  
    actualizarEstudios(id: number){
