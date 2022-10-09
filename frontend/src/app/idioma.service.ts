@@ -9,7 +9,7 @@ import { Idioma } from './idioma';
 export class IdiomaService {
 
   //Esta URL obtiene todos los idiomas de la base de datos
-  private baseURL ="http://localhost:8080/api/v1/idiomas";
+  private baseURL ="https://pgc-backend.herokuapp.com/api/v1/idiomas";
 
   constructor(private httpClient: HttpClient) {}
 

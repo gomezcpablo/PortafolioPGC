@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import swal from 'sweetalert2';
 import { AuthService } from '../auth.service';
 import { LoginUsuario } from '../login-usuario';
 import { TokenService } from '../token.service';
@@ -44,6 +45,7 @@ export class LoginComponent implements OnInit {
         this.isLogginFail = true;
         this.errMsj = err.error.mensaje;
         console.log(this.errMsj);
+        swal('Error de login',`Usuario o contraseña incorrectos`,`error`);
         
       })
   }

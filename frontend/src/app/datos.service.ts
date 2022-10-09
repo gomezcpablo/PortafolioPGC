@@ -9,7 +9,7 @@ import { Datos } from './datos';
 export class DatosService {
 
  //Esta URL obtiene todos los estudios de la base de datos
- private baseURL ="http://localhost:8080/api/v1/datos";
+ private baseURL ="https://pgc-backend.herokuapp.com/api/v1/datos";
 
  constructor(private httpClient: HttpClient) {}
 

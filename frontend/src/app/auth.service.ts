@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
 import { JwtDto } from './jwt-dto';
 import { LoginUsuario } from './login-usuario';
 import { NuevoUsuario } from './nuevo-usuario';
@@ -10,7 +9,7 @@ import { NuevoUsuario } from './nuevo-usuario';
   providedIn: 'root'
 })
 export class AuthService {
-  private baseURL ="http://localhost:8080/api/v1"
+  private baseURL ="https://pgc-backend.herokuapp.com/api/v1"
 
   constructor(private httpClient: HttpClient) { }
 

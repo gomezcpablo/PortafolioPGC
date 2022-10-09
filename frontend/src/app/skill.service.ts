@@ -9,7 +9,7 @@ import { Skill } from './skill';
 export class SkillService {
 
   //Esta URL obtiene todos los skills de la base de datos
-  private baseURL = "http://localhost:8080/api/v1/skills";
+  private baseURL = "https://pgc-backend.herokuapp.com/api/v1/skills";
 
   constructor(private httpClient: HttpClient) { }
 

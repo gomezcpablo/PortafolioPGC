@@ -9,7 +9,7 @@ import { Experiencia } from './experiencia';
 export class ExperienciaService {
 
   //Esta URL obtiene todas las experiencias de la base de datos
-  private baseURL ="http://localhost:8080/api/v1/experiencias";
+  private baseURL ="https://pgc-backend.herokuapp.com/api/v1/experiencias";
 
   constructor(private httpClient: HttpClient) {}
 
